@@ -34,7 +34,7 @@ nav{
 nav a{
     text-decoration: none;
     text-transform: uppercase;
-    color: black;
+    color: white;
     font-weight: bold;
 }
 .divHeader button,.left-section button{
@@ -65,10 +65,11 @@ main .left-section{
     font-size: 25px;
     text-transform: capitalize;
     font-weight: lighter;
-    color: #242424;
+    color: #b3b1b1;
 }
 .left-section p{
     margin-bottom: 20px;
+    color: white;
 }
 
 .left-section h1{
