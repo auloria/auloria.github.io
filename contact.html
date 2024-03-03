@@ -49,6 +49,14 @@
             </form>
         </center>
         <script>
+            let emailInput = document.getElementById("form2_email_input");
+
+            if (emailInput.value === "test"){
+                console.log("Valid!");
+            }
+            else {
+                console.log("This is not a valid email");
+            }
         </script>
     </body>
 </html>
