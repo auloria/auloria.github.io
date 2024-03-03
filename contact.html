@@ -19,6 +19,18 @@
             </div>
          
         </header>
+        <script>
+            function Validate() {
+                let emailInput = document.getElementById("form2_email_input");
+
+                if (emailInput.value === "test") {
+                    console.log("Valid!");
+                }
+                else {
+                    console.log("This is not a valid email");
+                }
+            }
+        </script>
         <center>
             <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xrgnkvaz" method="post">
                 <fieldset id="fs-frm-inputs">
@@ -35,7 +47,7 @@
                 </fieldset>
                 <input type="submit" value="Submit">
             </form>
-            <form>
+            <form action="Validate()">
                 <label for="full-name">Full Name</label></br>
                 <input type="text" name="name" id="form2_name_input" placeholder="Name goes here!" required=""></br></br>
                   
@@ -46,17 +58,8 @@
                 <textarea rows="5" name="message" id="form2_message_input" placeholder="Enter your message here." required=""></textarea></br></br>
                   
                 <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+                <input type="submit" value="Submit">
             </form>
         </center>
-        <script>
-            let emailInput = document.getElementById("form2_email_input");
-
-            if (emailInput.value === "test"){
-                console.log("Valid!");
-            }
-            else {
-                console.log("This is not a valid email");
-            }
-        </script>
     </body>
 </html>
