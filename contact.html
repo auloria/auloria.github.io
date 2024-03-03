@@ -19,37 +19,18 @@
             </div>
          
         </header>
-        <script>
-            function Validate() {
-                let emailInput = document.getElementById("form2_email_input");
-                let emailSubject = document.getElementById("form2_email_subject").value;
-                let message = document.getElementById("form2_message_input").value;
 
-                if (emailInput.value === "auloria@gmail.com") {
-                    console.log("Valid!");
-                    window.open('mailto:test@example.com?subject=' + emailSubject + '&body=' + message + '');
-                }
-                else {
-                    console.log("This is not a valid email");
-                }
+        <script>
+
+            function Email() {
+                window.open('mailto:weeebonics@gmail.com');
             }
         </script>
+
         <center>
-            <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xrgnkvaz" method="post">
-                <fieldset id="fs-frm-inputs">
-                    <label for="full-name">Full Name</label></br>
-                    <input type="text" name="name" id="full-name" placeholder="Name goes here!" required=""></br></br>
-                      
-                    <label for="email-address">Email Address</label></br>
-                    <input type="email" name="_replyto" id="email-address" placeholder="email@domain.com" required=""></br></br>
-                      
-                    <label for="message">Message</label></br>
-                    <textarea rows="5" name="message" id="message" placeholder="Enter your message here." required=""></textarea></br></br>
-                      
-                    <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-                </fieldset>
-                <input type="submit" value="Submit">
-            </form>
+
+            <div class="menuBtn"><button onclick="Email()">E-Mail Me</button></div>
+
             <form onsubmit="Validate()">
                 <label for="full-name">Full Name</label></br>
                 <input type="text" name="name" id="form2_name_input" placeholder="Name goes here!" required=""></br></br>
