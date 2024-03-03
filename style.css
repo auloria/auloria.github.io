@@ -37,7 +37,7 @@ nav a{
     color: white;
     font-weight: bold;
 }
-.divHeader button,.left-section button{
+.divHeader button, .left-section button, .menuBtn button{
     padding: 10px 30px;
     text-align: center;
     font-size: 14px;
