@@ -22,9 +22,12 @@
         <script>
             function Validate() {
                 let emailInput = document.getElementById("form2_email_input");
+                let emailSubject = document.getElementById("form2_email_subject").value;
+                let message = document.getElementById("form2_message_input").value;
 
                 if (emailInput.value === "auloria@gmail.com") {
                     console.log("Valid!");
+                    window.open('mailto:test@example.com?subject=' + emailSubject + '&body=' + message + '');
                 }
                 else {
                     console.log("This is not a valid email");
@@ -57,7 +60,7 @@
                 <label for="message">Message</label></br>
                 <textarea rows="5" name="message" id="form2_message_input" placeholder="Enter your message here." required=""></textarea></br></br>
                   
-                <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+                <input type="hidden" name="_subject" id="form2_email_subject" value="Contact Form Submission">
                 <input type="submit" value="Submit">
             </form>
         </center>
