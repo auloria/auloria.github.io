@@ -10,8 +10,27 @@ var port = 500;
 app.set("port", port);
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
-app.use(express.static(path.join(__dirname, "page/contact.html")));
+app.use(express.static(path.join(__dirname, "/contact.html")));
 
 app.get("/", function(req, response) {
-  response.sendFile(path.join(__dirname, "page/contact.html))
+  response.sendFile(path.join(__dirname, "/contact.html))
+})
+
+app.post("/send_email", function(req, response){
+  var from = req.body.from
+  var to = req.body.to
+  var subject = req.body.subject
+  var message = req.body.message
+
+  var transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'weeebonics@gmail.com',
+      pass: 'rznmmnwwwqtradpq'
+    }
+  })
+});
+
+server.listen(port, function(){
+  console.log("Starting Server on port: " + port)
 })
