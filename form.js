@@ -28,9 +28,28 @@ app.post("/send_email", function(req, response){
       user: 'weeebonics@gmail.com',
       pass: 'rznmmnwwwqtradpq'
     }
-  })
-});
+  });
 
+  var mailOptions = {
+    from: from,
+    to: to,
+    subject: subject,
+    message: message
+  }
+
+  transporter.sendMail(mailOptions,function(error, info){
+    if (error) {
+      console.log(error)
+    } else {
+      console.log("Email sent: " + info.response)
+    }
+    
+    response.redirect("/index.html")
+    
+  }
+
+})
+  
 server.listen(port, function(){
   console.log("Starting Server on port: " + port)
 })
